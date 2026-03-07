@@ -1,0 +1,115 @@
+/* Custom styles untuk melengkapi Tailwind */
+
+/* Animasi slider */
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none;
+}
+
+.slide.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Animasi notifikasi */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+#notification.show {
+    display: block;
+    animation: slideIn 0.3s ease forwards;
+}
+
+#notification.hide {
+    animation: slideOut 0.3s ease forwards;
+}
+
+/* Hover effect untuk product card */
+.product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.2);
+}
+
+/* Custom scrollbar untuk modal keranjang */
+#cartItems::-webkit-scrollbar {
+    width: 6px;
+}
+
+#cartItems::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+#cartItems::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+#cartItems::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Animasi untuk modal */
+.modal-enter {
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+.modal-enter-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.modal-exit {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.modal-exit-active {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+/* Style untuk quantity button */
+.quantity-btn {
+    transition: all 0.2s ease;
+}
+
+.quantity-btn:hover {
+    background-color: #e5e7eb;
+}
+
+.quantity-btn:active {
+    transform: scale(0.95);
+}
