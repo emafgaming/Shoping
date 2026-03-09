@@ -2,31 +2,31 @@
 const products = [
     {
         id: 1,
-        name: "Smartphone XYZ Pro",
-        price: 5999000,
-        description: "Smartphone dengan kamera 108MP dan baterai 5000mAh",
-        image: "https://via.placeholder.com/300x200/3b82f6/ffffff?text=Smartphone"
+        name: "Iphone 17 Pro Max",
+        price: 24000000,
+        description: "Flagship Apple dengan layar 6,9 inci ProMotion OLED, chipset A19 Pro, dan desain unibody aluminium yang lebih tangguh dengan Ceramic Shield 2",
+        image: "https://www.hellostore.id/cdn/shop/files/iPhone_17_Pro_Max_1.png?v=1759998375"
     },
     {
         id: 2,
         name: "Laptop UltraBook",
-        price: 12999000,
-        description: "Laptop tipis dengan prosesor i7 dan SSD 512GB",
-        image: "https://via.placeholder.com/300x200/10b981/ffffff?text=Laptop"
+        price: 24000000,
+        description: "Laptop gaming 16 inci kelas atas yang didukung prosesor hingga Intel® Core™ Ultra 9 275HX atau AMD Ryzen 9 8940HX, serta GPU NVIDIA® GeForce RTX™ 50-series (hingga RTX 5080)",
+        image: "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/catalog-image/MTA-161758345/asus_asus_rog_strix_g16_g614ji-i947c6g-o_i9-14900hx-32gb_1tb-rtx4070_8gb-16-_full01_d0y88x9n.jpg"
     },
     {
         id: 3,
-        name: "Smartwatch Series 5",
-        price: 2499000,
-        description: "Smartwatch dengan fitur kesehatan lengkap",
-        image: "https://via.placeholder.com/300x200/8b5cf6/ffffff?text=Smartwatch"
+        name: "Boze Quietcomfort Ultra Spatial Audio Headphones 2nd Gen",
+        price: 6949000,
+        description: "Bose QuietComfort Ultra (Gen 2) adalah headphone premium yang menggabungkan peredam bising (ANC) terbaik di kelasnya dengan teknologi Immersive Audio yang kini dilengkapi Cinema Mode untuk pengalaman suara layaknya bioskop",
+        image: "https://down-id.img.susercontent.com/file/sg-11134201-8260m-ml1k2tsoouf6a5"
     },
     {
         id: 4,
-        name: "Headphone Wireless",
-        price: 899000,
-        description: "Headphone dengan noise cancellation dan bass kuat",
-        image: "https://via.placeholder.com/300x200/ef4444/ffffff?text=Headphone"
+        name: "Herman Miller X Logitech G Embody",
+        price: 23000000,
+        description: "Herman Miller x Logitech G Embody adalah investasi ergonomi terbaik yang menggunakan sistem distribusi beban Pixelated Support untuk menjaga kesehatan punggung. Kursi ini dilengkapi material pendingin tembaga dan desain yang mengikuti gerak tubuh secara alami, menjadikannya standar tertinggi kursi gaming profesional dengan ketahanan luar biasa hingga 12 tahun.",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQU_4F37XdFtC4z9z4cK4zPz_mC7gX3uNcZg&se"
     }
 ];
 
@@ -293,33 +293,6 @@ function initModals() {
         saveCart();
     });
     
-    // Download PDF (simulasi)
-    document.getElementById('downloadPDF').addEventListener('click', () => {
-        alert('Fitur download PDF akan segera tersedia!');
-    });
-    
-    // Print
-    document.getElementById('printReceipt').addEventListener('click', () => {
-        const receiptContent = document.getElementById('receiptContent').innerHTML;
-        const printWindow = window.open('', '_blank');
-        printWindow.document.write(`
-            <html>
-                <head>
-                    <title>Struk Pembelian - EMA Store</title>
-                    <style>
-                        body { font-family: Arial, sans-serif; padding: 20px; }
-                        .receipt { max-width: 600px; margin: 0 auto; }
-                    </style>
-                </head>
-                <body>
-                    <div class="receipt">${receiptContent}</div>
-                </body>
-            </html>
-        `);
-        printWindow.document.close();
-        printWindow.print();
-    });
-    
     // Tutup modal saat klik di luar
     window.addEventListener('click', (e) => {
         if (e.target === cartModal) cartModal.classList.add('hidden');
@@ -342,7 +315,7 @@ function renderReceipt(transactionNumber, total, paymentMethod) {
     
     receiptContent.innerHTML = `
         <div class="text-center mb-4">
-            <h4 class="text-xl font-bold text-gray-800">EMA Store</h4>
+            <h4 class="text-xl font-bold text-gray-800">Reizen Store</h4>
             <p class="text-gray-600">Struk Pembelian</p>
         </div>
         <div class="mb-4">
@@ -377,7 +350,7 @@ function renderReceipt(transactionNumber, total, paymentMethod) {
             </tfoot>
         </table>
         <div class="text-center text-gray-600 text-sm">
-            <p>Terima kasih telah berbelanja di EMA Store!</p>
+            <p>Terima kasih telah berbelanja di Reizen Store!</p>
         </div>
     `;
 }
