@@ -3,221 +3,247 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EMA Store - Belanja Online Modern</title>
-    <!-- Tailwind CSS via CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome untuk icon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Custom CSS -->
+    <title>Ezzar Muhammad · Portofolio</title>
+    <!-- Font Awesome 5 -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <!-- CSS Eksternal -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-50 font-sans antialiased">
-
-    <!-- Navbar -->
-    <nav class="bg-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-3 flex flex-wrap items-center justify-between">
-            <!-- Nama Toko -->
-            <div class="text-2xl font-bold text-blue-600">EMA Store</div>
-
-            <!-- Search Bar - Tengah (hidden on mobile, flex on md) -->
-            <div class="hidden md:flex flex-1 max-w-md mx-4">
-                <div class="relative w-full">
-                    <input type="text" placeholder="Cari produk impianmu..." 
-                           class="w-full border border-gray-300 rounded-full py-2 px-4 pl-10 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent">
-                    <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
-                </div>
-            </div>
-
-            <!-- Cart Icon dengan Indikator -->
-            <div class="flex items-center space-x-4">
-                <button id="cartToggle" class="relative p-2 text-gray-700 hover:text-blue-600 transition-colors">
-                    <i class="fas fa-shopping-cart text-2xl"></i>
-                    <span id="cartCount" class="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">0</span>
-                </button>
-                <!-- Mobile menu button (optional) -->
-                <button class="md:hidden text-gray-700">
-                    <i class="fas fa-bars text-2xl"></i>
-                </button>
-            </div>
+<body>
+    <!-- NAVBAR (tetap dengan gradasi dan nama) -->
+    <nav class="navbar">
+        <div class="logo">
+            <h2><b>Ezzar Muhammad Akbar Firdaus</b></h2>
         </div>
-        <!-- Search Bar untuk Mobile -->
-        <div class="md:hidden px-4 pb-3">
-            <div class="relative">
-                <input type="text" placeholder="Cari produk impianmu..." 
-                       class="w-full border border-gray-300 rounded-full py-2 px-4 pl-10 focus:outline-none focus:ring-2 focus:ring-blue-400">
-                <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
-            </div>
-        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Beranda</a></li>
+            <li><a href="#about">Tentang Saya</a></li>
+            <li><a href="#education">Pendidikan</a></li>
+            <li><a href="#skills">Keahlian</a></li>
+            <li><a href="#hobbies">Hobi</a></li>
+        </ul>
     </nav>
 
-    <!-- Slider / Carousel -->
-    <div class="container mx-auto px-4 mt-6">
-        <div class="relative rounded-xl overflow-hidden shadow-lg">
-            <div id="slider" class="relative h-64 md:h-96">
-                <!-- Slides -->
-                <div class="slide active">
-                    <img src="https://via.placeholder.com/1200x400/3b82f6/ffffff?text=Diskon+50%25+Produk+Terpilih" class="w-full h-full object-cover" alt="Promo 1">
-                    <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">
-                        <h2 class="text-white text-3xl md:text-5xl font-bold">Diskon 50% Produk Terpilih</h2>
+    <main>
+       <!-- SECTION HERO / BERANDA (dengan foto) -->
+        <section id="home" class="hero">
+            <div class="hero-container">
+                <div class="hero-text">
+                    <h1>Halo Semua 👋, Saya <span class="highlight">Ezzar Muhammad Akbar Firdaus</span></h1>
+                    <h2>Web Developer</h2>
+                    <p>Portofolio ini menampilkan proyek dan kontribusi saya sebagai pengembang di bidang teknologi.</p>
+                    <a href="#contact" class="btn-primary">Hubungi Saya</a>
+                </div>
+                
+                <!-- FOTO PROFIL - Aktifkan bagian ini dan sesuaikan src dengan lokasi fotomu -->
+                <div class="hero-image">
+                    <img src="foto.ezzar.png" alt="Foto Ezzar Muhammad Akbar Firdaus" class="profile-photo">
+                    <!-- Efek bingkai gradient (opsional) -->
+                    <div class="photo-frame"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION TENTANG SAYA (optional, bisa diisi nanti) -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">Tentang Saya</h2>
+                <div class="about-content">
+                    <p>Halo! Saya Ezzar Muhammad Akbar Firdaus, seorang mahasiswa dari LP3I Pekanbaru. Saya memiliki ketertarikan besar dengan pembuatan Website dan berkeinginan menjadi seorang Web Developer.</p>
+                    <p>Saat ini saya sedang mendalami pengembangan web untuk menjadi Front End Developer. Portofolio ini adalah kumpulan proyek yang pernah saya kerjakan untuk mengasah kemampuan.</p>
+                    <p>📧 <strong>Email:</strong> ezzarmuhammadakbarfirdaus@gmail.com</p>
+                    <p>📍 <strong>Domisili:</strong>Pekanbaru,Riau</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION PENDIDIKAN -->
+        <section id="education" class="education">
+            <div class="container">
+                <h2 class="section-title">Pendidikan</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-left">
+                            <h3>Politeknik LP3I Pekanbaru</h3>
+                            <span class="timeline-year">2025 - 2028</span>
+                        </div>
+                        <div class="timeline-right">
+                            <h4>D2 Manajemen Informatika</h4>
+                            <p>Mempelajari dasar-dasar pemrograman, algoritma, dan struktur data</p>
+                        </div>
                     </div>
-                </div>
-                <div class="slide">
-                    <img src="https://via.placeholder.com/1200x400/10b981/ffffff?text=Gratis+Ongkir+Seluruh+Indonesia" class="w-full h-full object-cover" alt="Promo 2">
-                    <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">
-                        <h2 class="text-white text-3xl md:text-5xl font-bold">Gratis Ongkir Seluruh Indonesia</h2>
-                    </div>
-                </div>
-                <div class="slide">
-                    <img src="https://via.placeholder.com/1200x400/8b5cf6/ffffff?text=Belanja+HEMAT+Setiap+Hari" class="w-full h-full object-cover" alt="Promo 3">
-                    <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">
-                        <h2 class="text-white text-3xl md:text-5xl font-bold">Belanja HEMAT Setiap Hari</h2>
-                    </div>
-                </div>
-            </div>
-            <!-- Tombol Previous & Next -->
-            <button id="prevSlide" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-70 hover:bg-opacity-100 text-gray-800 p-3 rounded-full shadow-lg transition-all">
-                <i class="fas fa-chevron-left"></i>
-            </button>
-            <button id="nextSlide" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-70 hover:bg-opacity-100 text-gray-800 p-3 rounded-full shadow-lg transition-all">
-                <i class="fas fa-chevron-right"></i>
-            </button>
-            <!-- Indicators -->
-            <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-                <span class="indicator w-3 h-3 bg-white rounded-full cursor-pointer"></span>
-                <span class="indicator w-3 h-3 bg-white bg-opacity-50 rounded-full cursor-pointer"></span>
-                <span class="indicator w-3 h-3 bg-white bg-opacity-50 rounded-full cursor-pointer"></span>
-            </div>
-        </div>
-    </div>
-
-    <!-- Daftar Produk -->
-    <div class="container mx-auto px-4 py-12">
-        <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Produk Pilihan</h2>
-        <div id="productList" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <!-- Produk akan di-load via JavaScript -->
-        </div>
-    </div>
-
-    <!-- Modal Keranjang -->
-    <div id="cartModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center">
-        <div class="bg-white rounded-xl shadow-2xl w-full max-w-2xl max-h-[80vh] overflow-hidden">
-            <div class="p-6 border-b flex justify-between items-center">
-                <h3 class="text-2xl font-bold text-gray-800">Keranjang Belanja</h3>
-                <button id="closeCart" class="text-gray-500 hover:text-gray-700">
-                    <i class="fas fa-times text-2xl"></i>
-                </button>
-            </div>
-            <div id="cartItems" class="p-6 overflow-y-auto max-h-96">
-                <!-- Item keranjang akan diisi via JS -->
-            </div>
-            <div class="p-6 border-t bg-gray-50">
-                <div class="flex justify-between items-center mb-4">
-                    <span class="text-lg font-semibold text-gray-700">Total:</span>
-                    <span id="cartTotal" class="text-2xl font-bold text-blue-600">Rp 0</span>
-                </div>
-                <button id="checkoutBtn" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-                    Lanjut ke Pembayaran
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal Pembayaran -->
-    <div id="paymentModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center">
-        <div class="bg-white rounded-xl shadow-2xl w-full max-w-md p-6">
-            <h3 class="text-2xl font-bold text-gray-800 mb-4">Pilih Metode Pembayaran</h3>
-            <div class="space-y-3 mb-6">
-                <label class="flex items-center p-3 border rounded-lg cursor-pointer hover:bg-gray-50">
-                    <input type="radio" name="payment" value="Transfer Bank" class="mr-3" checked>
-                    <i class="fas fa-university text-blue-600 mr-2"></i>
-                    <span>Transfer Bank</span>
-                </label>
-                <label class="flex items-center p-3 border rounded-lg cursor-pointer hover:bg-gray-50">
-                    <input type="radio" name="payment" value="E-Wallet" class="mr-3">
-                    <i class="fas fa-wallet text-green-600 mr-2"></i>
-                    <span>E-Wallet</span>
-                </label>
-                <label class="flex items-center p-3 border rounded-lg cursor-pointer hover:bg-gray-50">
-                    <input type="radio" name="payment" value="COD" class="mr-3">
-                    <i class="fas fa-truck text-orange-600 mr-2"></i>
-                    <span>COD (Bayar di Tempat)</span>
-                </label>
-            </div>
-            <div class="flex space-x-3">
-                <button id="backToCart" class="flex-1 bg-gray-200 text-gray-800 py-2 rounded-lg hover:bg-gray-300 transition-colors">
-                    Kembali
-                </button>
-                <button id="confirmPayment" class="flex-1 bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors">
-                    Konfirmasi
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal Struk -->
-    <div id="receiptModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center">
-        <div class="bg-white rounded-xl shadow-2xl w-full max-w-2xl p-6">
-            <div class="flex justify-between items-center mb-4">
-                <h3 class="text-2xl font-bold text-gray-800">Struk Pembelian</h3>
-                <button id="closeReceipt" class="text-gray-500 hover:text-gray-700">
-                    <i class="fas fa-times text-2xl"></i>
-                </button>
-            </div>
-            <div id="receiptContent" class="border-t border-b py-4 mb-4">
-                <!-- Struk akan diisi via JS -->
-            </div>
-            <div class="flex justify-end space-x-3">
-                <button id="downloadPDF" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-                    <i class="fas fa-download mr-2"></i>Download PDF
-                </button>
-                <button id="printReceipt" class="bg-gray-600 text-white px-6 py-2 rounded-lg hover:bg-gray-700 transition-colors">
-                    <i class="fas fa-print mr-2"></i>Print
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Notifikasi -->
-    <div id="notification" class="fixed bottom-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg transform transition-transform translate-y-0 hidden">
-        <i class="fas fa-check-circle mr-2"></i>
-        <span>Produk berhasil ditambahkan ke keranjang!</span>
-    </div>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white mt-12">
-        <div class="container mx-auto px-4 py-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Tentang Kami</h4>
-                    <p class="text-gray-400">EMA Store adalah platform belanja online terpercaya dengan produk berkualitas dan harga terjangkau.</p>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Kontak</h4>
-                    <ul class="text-gray-400 space-y-2">
-                        <li><i class="fas fa-phone mr-2"></i> (021) 1234-5678</li>
-                        <li><i class="fas fa-envelope mr-2"></i> cs@emastore.com</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Alamat</h4>
-                    <p class="text-gray-400">Jl. Sudirman No. 123, Jakarta Pusat, Indonesia</p>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Sosial Media</h4>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-twitter"></i></a>
+                    <div class="timeline-item">
+                        <div class="timeline-left">
+                            <h3>SMA Negeri 1 Perhentian Raja</h3>
+                            <span class="timeline-year">2022 - 2025</span>
+                        </div>
+                        <div class="timeline-right">
+                            <h4>Ilmu Pengetahuan Alam (IPA)</h4>
+                            <p>Lulus dengan nilai yang memuaskan</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="border-t border-gray-700 mt-8 pt-4 text-center text-gray-400">
-                <p>&copy; 2024 EMA Store. All rights reserved.</p>
+        </section>
+
+        <!-- SECTION KEAHLIAN -->
+        <section id="skills" class="skills">
+            <div class="container">
+                <h2 class="section-title">Keahlian</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3><i class="fas fa-code"></i> Bahasa Pemrograman</h3>
+                        <ul>
+                            <li>HTML & CSS (Dasar/Menengah)</li>
+                            <li>JavaScript (Dasar)</li>
+                            <li>[PHP/Python/Java, dll]</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fas fa-tools"></i> Tools & Framework</h3>
+                        <ul>
+                            <li>Visual Studio Code</li>
+                            <li>Bootstrap/Tailwind</li>
+                            <li>Git/GitHub</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fas fa-users"></i> Soft Skills</h3>
+                        <ul>
+                            <li>Komunikasi</li>
+                            <li>Kerja Tim</li>
+                            <li>Pemecahan Masalah</li>
+                            <li>Manajemen Waktu</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
+        </section>
+
+        <!-- SECTION HOBI -->
+        <section id="hobbies" class="hobbies">
+            <div class="container">
+                <h2 class="section-title">Hobi</h2>
+                <div class="hobbies-grid">
+                    <div class="hobby-item">
+                        <i class="fas fa-gamepad"></i>
+                        <p>Bermain Game RPG (untuk relaksasi)</p>
+                    </div>
+                    <div class="hobby-item">
+                        <i class="fas fa-headphones-alt"></i>
+                        <p>Mendengarkan Musik/Podcast</p>
+                    </div>
+                    <div class="hobby-item">
+                        <i class="fas fa-fish"></i>
+                        <p>Memancing</p>
+                    </div>
+                    <div class="hobby-item">
+                        <i class="fas fa-running"></i>
+                        <p>Lari</p>
+                    </div>
+                    <div class="hobby-item">
+                        <i class="fas fa-utensils"></i>
+                        <p>Mencoba Makanan Baru</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION PROYEK (seperti di contoh, dengan grid) -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 class="section-title">Project</h2>
+                <p class="section-subtitle">Berikut beberapa project yang pernah / sedang saya kembangkan</p>
+                <div class="projects-grid">
+                    <!-- Card Project 1 (Contoh) -->
+                    <div class="project-card">
+                        <h3>Website Portofolio Pribadi</h3>
+                        <p>Website portofolio responsif yang menampilkan profil, keahlian, dan proyek. Dibangun dengan HTML, CSS, dan JavaScript.</p>
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <a href="#" class="btn-outline" target="_blank">Lihat Project <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    <div class="project-card">
+                        <h3>Game Matematika</h3>
+                        <p>Game yang untuk melatih perhitungan dasar dengan angka yang acak.</p>
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>Java Script</span>
+                        </div>
+                        <a href="#" class="btn-outline" target="_blank">Lihat Project <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION KONTAK (di sini sebagai bagian utama, tapi akan ada juga di footer) -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Hubungi Saya</h2>
+                <p class="section-subtitle">Silakan hubungi saya melalui email atau media sosial di bawah ini</p>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <p><strong>Email:</strong> <a href="mailto:ezzarmuhammadakbarfirdaus@gmail.com">ezzarmuhammadakbarfirdaus@gmail.com</a></p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-linkedin"></i>
+                            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/ezzar-muhammad-akbar-firdaus-51492537a/" target="Ezzar-Muhammad-Akbar-Firdaus">Ezzar-Muhammad-Akbar-Firdaus</a></p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-github"></i>
+                            <p><strong>GitHub:</strong> <a href="https://github.com/EzzarMuhammadAkbarFirsaus" target="github.com/EzzarMuhammadAkbarFirsaus">github.com/EzzarMuhammadAkbarFirsaus</a></p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-instagram"></i>
+                            <p><strong>Instagram:</strong> <a href="https://www.instagram.com/ezzar_maf/" target="@ezzar_maf">@ezzarmaf</a></p>
+                        </div>
+                    </div>
+                    <!-- Bisa tambahkan form kontak sederhana jika mau -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER (dengan kontak dan menu) -->
+    <footer class="footer" id="footer-contact">
+        <ul class="footer-links">
+            <li><a href="#contact">Kontak</a></li>
+            <li><a href="#about">Tentang</a></li>
+            <li><a href="#education">Pendidikan</a></li>
+            <li><a href="#skills">Keahlian</a></li>
+            <li><a href="#hobbies">Hobi</a></li>
+            <li><a href="#home">Beranda</a></li>
+        </ul>
+
+        <div class="social-icons">
+            <a href="mailto:ezzarmuhammadakbarfirdaus@gmail.com" aria-label="email"><i class="far fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/ezzar-muhammad-akbar-firdaus-51492537a/" target="_blank" aria-label="linkedin"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/EzzarMuhammadAkbarFirsaus" target="_blank" aria-label="github"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/ezzar_maf/" target="_blank" aria-label="instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+
+        <div class="copyright">
+            © 2025 Ezzar Muhammad Akbar Firdaus. Dibuat dengan <i class="fas fa-heart" style="color: #ff6b9d;"></i> untuk portofolio.
         </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script src="script.js"></script>
+    <!-- Smooth scroll sederhana (opsional) -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
